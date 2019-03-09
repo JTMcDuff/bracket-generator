@@ -1,0 +1,19 @@
+{
+  "name": "bracket-generator",
+  "version": "1.0.0",
+  "description": "Generate \"dumb\" brackets for March Madness",
+  "main": "bracket-gen.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JTMcDuff/bracket-generator.git"
+  },
+  "author": "Johnny McDuff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JTMcDuff/bracket-generator/issues"
+  },
+  "homepage": "https://github.com/JTMcDuff/bracket-generator#readme"
+}
