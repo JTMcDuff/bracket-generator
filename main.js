@@ -9,18 +9,15 @@ const generateBracket = bracketGen.generateBracket;
 const brackets = generateBracket(names);
 
 //Print to md format
-printContents(brackets);
+_printContents(brackets);
 
 
-function printContents(brackets) {
+function _printContents(brackets) {
 	// Sort output
-
-	const sortedBrackets = 
-
 	const outputFile = 'output.md';
 	fs.truncate(outputFile, 0, ()=>{ console.log('truncated file')});
 
-	const stream = fs.createWriteStream('output.md');
+	const stream = fs.createWriteStream(outputFile);
 
 	stream.write('#Bracket Results\n');
 	stream.write('## Bracket: Seed\n');
@@ -33,5 +30,6 @@ function printContents(brackets) {
 	}
 
 	stream.end();
+	console.log('Bracket Generated');
 
 };
