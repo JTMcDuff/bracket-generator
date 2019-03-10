@@ -19,7 +19,7 @@ function _printContents(brackets) {
 
 	const stream = fs.createWriteStream(outputFile);
 
-	stream.write('#Bracket Results\n');
+	stream.write('# Bracket Results\n');
 	stream.write('## Bracket: Seed\n');
 	for (var key in brackets) {
 		stream.write('### ' + key +'\n');
