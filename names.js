@@ -1,6 +1,6 @@
 
 // Update Array to hold 16 names
-var names = ['Johnny',
+const names = ['Johnny',
 			 'Jared',
 			 'Charles',
 			 'Elliot',
