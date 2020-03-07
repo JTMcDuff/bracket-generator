@@ -1,18 +1,18 @@
-const nameModule = require('./names');
-const bracketGen = require('./bracket-gen');
+const { names } = require('./names');
+const { generateBracket } = require('./bracket-gen');
+const { sortNames } = require('./sortNames');
 const fs = require('fs');
 
-const names = nameModule.names;
-const generateBracket = bracketGen.generateBracket;
 
-// Get our brackets
+// Generate brackets and sorted Names for printing
 const brackets = generateBracket(names);
+const sortedNames = sortNames(names);
 
 //Print to md format
-_printContents(brackets);
+_printContents(brackets, sortedNames);
 
 
-function _printContents(brackets) {
+function _printContents(brackets, sortedNames) {
 	// Sort output
 	const outputFile = 'output.md';
 	fs.truncate(outputFile, 0, ()=>{ console.log('truncated file')});
@@ -21,13 +21,13 @@ function _printContents(brackets) {
 
 	stream.write('#Bracket Results\n');
 	stream.write('## Bracket: Seed\n');
-	for (var key in brackets) {
-		stream.write('### ' + key +'\n');
-		stream.write('* West: ' + brackets[key]['west']+'\n');
-		stream.write('* East: ' + brackets[key]['east']+'\n');
-		stream.write('* South: ' + brackets[key]['south']+'\n');
-		stream.write('* Mid-West: ' + brackets[key]['midWest']+'\n');
-	}
+	sortedNames.forEach(name => {
+		stream.write('### ' + name +'\n');
+		stream.write('* West: ' + brackets[name]['west']+'\n');
+		stream.write('* East: ' + brackets[name]['east']+'\n');
+		stream.write('* South: ' + brackets[name]['south']+'\n');
+		stream.write('* Mid-West: ' + brackets[name]['midWest']+'\n');
+	})
 
 	stream.end();
 	console.log('Bracket Generated');

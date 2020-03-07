@@ -1,17 +1,22 @@
 #Bracket Results
 ## Bracket: Seed
-### johnny
-* West: 12
-* East: 2
-* South: 1
-* Mid-West: 16
-### jared
-* West: 8
-* East: 4
+### charles
+* West: 11
+* East: 16
+* South: 14
+* Mid-West: 4
+### elliot
+* West: 4
+* East: 13
 * South: 16
 * Mid-West: 10
-### charles
+### jared
+* West: 6
+* East: 4
+* South: 4
+* Mid-West: 5
+### johnny
 * West: 13
-* East: 13
-* South: 6
-* Mid-West: 4
+* East: 15
+* South: 1
+* Mid-West: 1
